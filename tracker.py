@@ -47,7 +47,7 @@ def discover_action_ids():
 
 def fetch_locker(locker_id, action_id):
     body = json.dumps([str(locker_id)]).encode()
-        text = http(PAGE + "?country=fr&region=europe", data=body, headers={
+    text = http(PAGE + "?country=fr&region=europe", data=body, headers={
         "Accept": "text/x-component",
         "Next-Action": action_id,
         "Content-Type": "text/plain;charset=UTF-8",
