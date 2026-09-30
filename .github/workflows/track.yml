@@ -2,7 +2,7 @@ name: Track Vinted Go lockers
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/15 * * * *"   # every 15 min while testing alerts
   workflow_dispatch:
 
 permissions:
@@ -24,6 +24,8 @@ jobs:
           python-version: "3.12"
 
       - name: Read lockers
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python tracker.py
 
       - name: Save data
@@ -31,6 +33,6 @@ jobs:
         run: |
           git config user.name "locker-tracker"
           git config user.email "locker-tracker@users.noreply.github.com"
-          git add data/history.csv || true
+          git add -A data || true
           git diff --cached --quiet || git commit -m "Locker snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase && git push
