@@ -12,6 +12,7 @@ import csv
 import json
 import re
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -50,12 +51,15 @@ def fetch_locker(locker_id, action_id):
         "Accept": "text/x-component",
         "Next-Action": action_id,
         "Content-Type": "text/plain;charset=UTF-8",
+        "Origin": BASE,
+        "Referer": PAGE + "?country=fr&region=europe",
     })
     for line in text.splitlines():
         if line.startswith("1:{"):
             data = json.loads(line[2:])
             if "available_sizes" in data:
                 return data
+    print(f"  [debug] action {action_id[:10]}...: no locker data. Response starts with: {text[:300]!r}")
     return None
 
 
@@ -64,6 +68,7 @@ def main():
     action_ids = discover_action_ids()
     if not action_ids:
         sys.exit("Could not find the server action ID: the Vinted Go page structure changed.")
+    print(f"[debug] action IDs found: {[a[:10] + '...' for a in action_ids]}")
 
     now = datetime.now(timezone.utc)
     paris = now.astimezone(ZoneInfo("Europe/Paris"))
@@ -74,7 +79,11 @@ def main():
         for aid in action_ids:
             try:
                 data = fetch_locker(locker["id"], aid)
-            except Exception:
+            except urllib.error.HTTPError as e:
+                print(f"  [debug] action {aid[:10]}...: HTTP {e.code}. Body starts with: {e.read()[:300]!r}")
+                data = None
+            except Exception as e:
+                print(f"  [debug] action {aid[:10]}...: {type(e).__name__}: {e}")
                 data = None
             if data:
                 break
