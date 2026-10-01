@@ -13,3 +13,5 @@ timestamp_utc,date_paris,time_paris,weekday,locker_id,name,address,XS,S,M,XS_ok,
 2026-10-01T11:45:26Z,2026-10-01,13:45,Thursday,129341,Bio C'bon,64 rue Rivay,5+,5+,5+,no,no,yes,Low capacity
 2026-10-01T11:56:10Z,2026-10-01,13:56,Thursday,127639,Speed Queen Laverie,19 Rue Eugénie Eboué,5+,5+,0,yes,yes,yes,Normal
 2026-10-01T11:56:10Z,2026-10-01,13:56,Thursday,129341,Bio C'bon,64 rue Rivay,5+,5+,5+,no,no,yes,Low capacity
+2026-10-01T12:00:55Z,2026-10-01,14:00,Thursday,127639,Speed Queen Laverie,19 Rue Eugénie Eboué,5+,5+,0,yes,yes,yes,Normal
+2026-10-01T12:00:55Z,2026-10-01,14:00,Thursday,131435,Leroy Merlin,9 rue Ardoin,0,5+,5+,no,no,no,Normal
