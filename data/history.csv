@@ -49,3 +49,5 @@ timestamp_utc,date_paris,time_paris,weekday,locker_id,name,address,XS,S,M,XS_ok,
 2026-10-01T15:52:24Z,2026-10-01,17:52,Thursday,131435,Leroy Merlin,9 rue Ardoin,3,5+,5+,no,yes,no,Normal
 2026-10-01T16:01:00Z,2026-10-01,18:01,Thursday,127639,Speed Queen Laverie,19 Rue Eugénie Eboué,5+,5+,0,no,yes,no,Normal
 2026-10-01T16:01:00Z,2026-10-01,18:01,Thursday,131435,Leroy Merlin,9 rue Ardoin,3,5+,5+,no,yes,no,Normal
+2026-10-01T16:10:26Z,2026-10-01,18:10,Thursday,127639,Speed Queen Laverie,19 Rue Eugénie Eboué,5+,5+,0,no,yes,no,Normal
+2026-10-01T16:10:26Z,2026-10-01,18:10,Thursday,131435,Leroy Merlin,9 rue Ardoin,4,5+,5+,no,yes,no,Normal
