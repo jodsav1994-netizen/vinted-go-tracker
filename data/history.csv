@@ -5,3 +5,5 @@ timestamp_utc,date_paris,time_paris,weekday,locker_id,name,address,XS,S,M,XS_ok,
 2026-09-30T20:55:56Z,2026-09-30,22:55,Wednesday,129341,Bio C'bon,64 rue Rivay,5+,5+,5+,no,no,yes,Low capacity
 2026-10-01T00:14:54Z,2026-10-01,02:14,Thursday,127639,Speed Queen Laverie,19 Rue Eugénie Eboué,5+,5+,3,yes,no,no,Low capacity
 2026-10-01T00:14:54Z,2026-10-01,02:14,Thursday,129341,Bio C'bon,64 rue Rivay,5+,5+,5+,no,no,yes,Low capacity
+2026-10-01T05:54:51Z,2026-10-01,07:54,Thursday,127639,Speed Queen Laverie,19 Rue Eugénie Eboué,5+,5+,3,yes,no,no,Low capacity
+2026-10-01T05:54:51Z,2026-10-01,07:54,Thursday,129341,Bio C'bon,64 rue Rivay,5+,5+,5+,no,no,yes,Low capacity
