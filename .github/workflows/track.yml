@@ -1,8 +1,6 @@
 name: Track Vinted Go lockers
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"   # every 15 min while testing alerts
   workflow_dispatch:
 
 permissions:
